@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Tree menu list{% endblock %}
+
+{% load static %}
+{% load draw_menu %}
+
+{% block content %}
+
+<div class="content-body">
+    {% draw_menu 'A' %}
+    {% for cat in parent_ids %}
+    <div class="wrapper flex">
+        <a href="/{{ cat.self_url }}">{{ cat.title }}</a>
+        <details {% if cat.id in parent_ids %} open {% endif %}>
+        {% if cat.get_children %}
+            {% for child in cat.get_children %}
+            <div class="category">
+                {% draw_menu_children child.id %}
+            </div>
+            {% endfor %}
+        {% endif %}
+        </details>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
