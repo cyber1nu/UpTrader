@@ -13,11 +13,24 @@
 
 6. python manage.py cratesuperuser (admin, 12345)
 
-6. python manage.py runserver 
+7. python manage.py shell
+    7.1 from tree_menu.views import fill_db
+    7.2 fill_db()
+    7.3 exit()
 
-7. web: 127.0.0.1:8000/admin/ *login*
+8. python manage.py runserver
 
-8. make your menu categories in DB
+# OR
+7. python manage.py runserver
 
-9. web: 127.0.0.1:8000
+8. web: 127.0.0.1:8000/admin/ 
+*login*
+
+9. make your menu categories in DB
+
+
+
+# finally
+web: 127.0.0.1:8000/up/trader/1
+
 
