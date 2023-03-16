@@ -1,29 +1,21 @@
-{% extends 'base.html' %}
 
-{% block title %}Tree menu list{% endblock %}
+<div class="parents" style="display: flex;">
 
-{% load static %}
-{% load draw_menu %}
-
-{% block content %}
-
-<div class="content-body">
-    {% draw_menu 'A' %}
-    {% for cat in parent_ids %}
-    <div class="wrapper flex">
-        <a href="/{{ cat.self_url }}">{{ cat.title }}</a>
-        <details {% if cat.id in parent_ids %} open {% endif %}>
-        {% if cat.get_children %}
-            {% for child in cat.get_children %}
-            <div class="category">
-                {% draw_menu_children child.id %}
-            </div>
-            {% endfor %}
-        {% endif %}
-        </details>
-    </div>
+    {% if parents %}
+    {% for par in parents %}
+    <span class="par"><a href="/up/trader/{{ par.id }}/"> {{ par }} --></a></span>
     {% endfor %}
+    {% endif %}
 </div>
 
+<div class="cur-cat">
+    <p>{{ object.title }}</p>
+</div>
 
-{% endblock %}
+<div class="children" style="display: flex; flex-direction: column;">
+    {% if children %}
+    {% for child in children %}
+    <span class="par"><a href="/up/trader/{{ child.id }}"><-- {{ child }}</a></span>
+    {% endfor %}
+    {% endif %}
+</div>

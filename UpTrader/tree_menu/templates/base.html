@@ -5,12 +5,12 @@
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
     {% load draw_menu %}
-    <link rel="stylesheet" href="{% static '/styles/uptrade.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
 </head>
 <body>
     <header>
         <div class="header-wrap flex">
-            <ul class="header-list-left">
+            <ul class="header-list-left reset-list flex">
                 <li class="list-left-item">
                     <a href="#" class="header-link">
                         Ссылка №1
@@ -27,7 +27,7 @@
                     </a>
                 </li>
             </ul>
-            <ul class="header-list-right">
+            <ul class="header-list-right reset-list flex">
                 <li class="list-right-item">
                     <a href="#" class="header-link">
                         Контакты
@@ -47,42 +47,51 @@
         </div>
     </header>
 
+    <div class="firsts" style="display: flex; max-width: 1000px; justify-content: space-between; padding: 20px; min-height: 100px;">
+        {% for first in firsts %}
+        <a href="/up/trader/{{ first.id }}/">
+            {{ first }}
+        </a>
+        {% endfor %}
+    </div>
 
-    {% block content %}
+    <div class="content-body" style="display: flex; justify-content: space-between; max-width: 500px; min-height: 500px; align-items: center;">
+    {% draw object.title %}
 
-    {% endblock %}
+
+    </div>
 
     <footer>
         <div class="footer-wrap flex">
-            <ul class="header-list-left">
-                <li class="list-left-item">
+            <ul class="footer-list-left reset-list">
+                <li class="foot-left-item">
                     <a href="#" class="header-link">
                         Сайт с левами
                     </a>
                 </li>
-                <li class="list-left-item">
+                <li class="foot-left-item">
                     <a href="#" class="header-link">
                         Сайт с центрами
                     </a>
                 </li>
-                <li class="list-left-item">
+                <li class="foot-left-item">
                     <a href="#" class="header-link">
                         Сайт с правами
                     </a>
                 </li>
             </ul>
-            <ul class="header-list-right">
-                <li class="list-right-item">
+            <ul class="footer-list-right reset-list">
+                <li class="foot-right-item">
                     <a href="#" class="header-link">
                         Телефон
                     </a>
                 </li>
-                <li class="list-right-item">
+                <li class="foot-right-item">
                     <a href="#" class="header-link">
                         Грамофон
                     </a>
                 </li>
-                <li class="list-right-item">
+                <li class="foot-right-item">
                     <a href="#" class="header-link">
                         Почтальон
                     </a>

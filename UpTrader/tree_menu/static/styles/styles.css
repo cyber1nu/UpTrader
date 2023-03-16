@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Muller";
+    src: local("Muller"),
+      url("../fonts/MullerRegular.woff2") format("woff2"),
+      url("../fonts/MullerRegular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Muller";
+    src: local("Muller"),
+      url("../fonts/MullerLight.woff2") format("woff2"),
+      url("../fonts/MullerLight.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Muller";
+    src: local("Muller"),
+      url("../fonts/MullerMedium.woff2") format("woff2"),
+      url("../fonts/MullerMedium.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Muller";
+    src: local("Muller"),
+      url("../fonts/MullerBold.woff2") format("woff2"),
+      url("../fonts/MullerBold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'muller', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f2f9fa;
+    padding: 5% 10%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1, h2, h3, p, a, div, span {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: blue;
+    transition: color 0.4s ease;
+  }
+
+  a:hover {
+    color: #CC6978;
+  }
+
+  div {
+    margin: 0;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .reset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* header */
+
+  .header-wrap {
+    justify-content: space-between;
+  }
+
+  .list-left-item,
+  .list-right-item {
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #CC6978;
+    border-radius: 10px;
+    background-color: #aaa014;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  .list-left-item:hover,
+  .list-right-item:hover {
+    background-color: #25da11;
+  }
+
+  .list-right-item:not(:last-child),
+  .list-left-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  /* footer */
+
+  .footer-wrap {
+    justify-content: space-between;
+  }
+
+  .footer-list-left,
+  .footer-list-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foot-left-item,
+  .foot-right-item {
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #CC6978;
+    border-radius: 10px;
+    background-color: #aaa014;
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  .foot-left-item:hover,
+  .foot-right-item:hover {
+    background-color: #25da11;
+  }
+
+  .foot-right-item:not(:last-child),
+  .foot-left-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  /* content */
+
+  .par {
+    padding: 10px;
+  }
+
+  .par:not(:last-child) {
+    margin-bottom: 15px;
+  }

@@ -1,8 +1,7 @@
 from django.urls import path
-from .views import index
+from .views import IndexDetailView
 
 
 urlpatterns = [
-    path('', index, name='tree_menu'),
-    path('<int:pk>', index, name='tree_menu_tree')
+    path('trader/<int:pk>/', IndexDetailView.as_view(), name='tree_menu_tree')
 ]

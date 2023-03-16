@@ -4,6 +4,6 @@ from .models import CategoryModel
 
 @admin.register(CategoryModel)
 class AdminCategory(admin.ModelAdmin):
-    list_display = ['title', 'parent']
+    list_display = ['title', 'parent', 'id']
 
 
