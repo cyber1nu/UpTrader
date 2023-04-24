@@ -17,6 +17,8 @@
 
 8. python manage.py runserver
 
+9. web: 127.0.0.1:8000/up/trader/1
+
 # OR
 7. python manage.py runserver
 
@@ -24,6 +26,8 @@
 *login*
 
 9. make your menu categories in DB
+
+10. web 127.0.0.1:8000/up/trader/1
 
 
 
