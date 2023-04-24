@@ -13,10 +13,7 @@
 
 6. python manage.py cratesuperuser (admin, 12345)
 
-7. python manage.py shell
-    7.1 from tree_menu.views import fill_db
-    7.2 fill_db()
-    7.3 exit()
+7. python manage.py fill_db (*fill DB with categories*)
 
 8. python manage.py runserver
 

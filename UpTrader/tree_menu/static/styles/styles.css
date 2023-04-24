@@ -92,6 +92,8 @@
 
   .header-wrap {
     justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
   }
 
   .list-left-item,
@@ -148,10 +150,30 @@
 
   /* content */
 
-  .par {
-    padding: 10px;
+  .firsts {
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
   }
 
-  .par:not(:last-child) {
-    margin-bottom: 15px;
+  .par {
+    display: flex;
+    padding: 20px;
+    min-width: 270px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    align-self: center;
+  }
+
+  .content-body {
+    display: flex;
+    min-height: 250px;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    flex-start: start;
+  }
+
+  .parent, .cur-cat, .children {
+    padding: 10px;
   }
